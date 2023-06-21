@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Jovian Careers</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- <link rel="stylesheet" href="style\style.css"> -->
+    <style>
+      /* h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        text-align: center;
+        color: rgb(100, 100, 100);
+      } */
+      .para1 {
+        font-family: Roboto;
+        color: rgb(80, 80, 80);
+        font-size: 20px;
+      }
+      #banner {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      /* h2 {
+        font-size: 32px;
+        font-family: Roboto;
+        text-align: center;
+        color: rgb(100, 100, 100);
+      } */
+      #container {
+        max-width: 800px;
+        margin: 0 auto 0 auto;
+      }
+      #button {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+      <img
+        id="banner"
+        class="img-fluid"
+        src="static\City_2.jpg"
+        alt="Image of City"
+        height="320px"
+        title="Image of a City"
+      />
+
+      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo
+        magna, volutpat eu condimentum non, ultrices non urna. Nunc eget
+        efficitur sapien. Pellentesque dui velit, congue sed faucibus in,
+        ultrices sit amet nisi. Nullam consequat odio vel fermentum luctus. Nunc
+        egestas felis a efficitur sagittis. Vestibulum nec metus nisi. Nam
+        consectetur ut sapien non dictum. Fusce commodo facilisis aliquam. Donec
+        suscipit tortor felis, quis laoreet ipsum vehicula vitae. Maecenas purus
+        mauris, cursus at porta vel, malesuada eu sem. Duis aliquam orci leo,
+        quis venenatis arcu tempus sed. In laoreet velit id viverra suscipit.
+        Phasellus eu est ipsum. Nam mattis aliquet commodo. Vivamus neque nisl,
+        vestibulum eu quam ut, placerat viverra ex. Nulla ac metus vel lectus
+        molestie convallis. Cras lobortis ante tortor, quis tempor tellus
+        pharetra id. Praesent pharetra ligula nibh, eu faucibus nulla lobortis
+        non. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+        per inceptos himenaeos. Etiam ac nunc blandit, tempus tellus ac, lacinia
+        mi. Fusce quis efficitur nisl. Quisque eget ex pulvinar, aliquet urna
+        posuere, finibus mauris. Integer sit amet massa nisi. Orci varius
+        natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Aenean posuere lacus elit, quis dictum justo pulvinar ut. Nulla vel
+        malesuada nisl. Pellentesque placerat tempor libero, eu vestibulum risus
+        porta eu. Nam pulvinar tellus eget nisi posuere pulvinar. Donec vehicula
+        lacus tincidunt eros ultricies hendrerit. Mauris venenatis, nunc vel
+        volutpat lacinia, dolor ipsum imperdiet velit, non ultricies nulla
+        turpis id nisl. Integer posuere est eget nibh blandit commodo. Sed
+        imperdiet semper lectus, quis rutrum augue suscipit vitae. Ut eu nibh
+        tempus, lobortis mi lacinia, tempus diam. Aliquam eget ex erat.
+        Suspendisse porta pretium purus, eu tempus arcu congue eget. Vestibulum
+        eu enim eget sapien ornare ultricies. <br />
+        Aenean quam felis, hendrerit quis vestibulum et, fringilla quis tellus.
+        Phasellus eget tortor nibh. Mauris quis porta purus. Cras a feugiat
+        augue. Nunc feugiat velit at euismod mollis. Mauris ante tellus, viverra
+        eu odio vitae, aliquet tincidunt mauris. Phasellus vehicula, turpis sed
+        blandit semper, quam massa congue purus, sit amet tincidunt metus mauris
+        nec magna. In hac habitasse platea dictumst. In hac habitasse platea
+        dictumst. Aliquam rutrum vulputate varius. Maecenas mollis, nisl non
+        viverra ultrices, urna enim egestas erat, sit amet dignissim tortor
+        justo iaculis libero. Aliquam facilisis facilisis tincidunt.
+        Pellentesque mollis imperdiet massa, sit amet vestibulum ligula
+        tincidunt et. Aenean a dui nec orci laoreet feugiat non non tortor. In
+        hac habitasse platea dictumst.
+        <br />
+        Quisque rutrum diam vel ornare vestibulum. Quisque lacinia semper
+        sapien, a scelerisque sapien volutpat sed. Fusce pretium consectetur
+        neque a efficitur. Donec ut consequat sem. Pellentesque habitant morbi
+        tristique senectus et netus et malesuada fames ac turpis egestas.
+        Maecenas pellentesque, lectus at gravida dignissim, arcu odio egestas
+        tellus, ut tristique lacus augue id odio. Duis eget neque dui.
+      </p>
+      <h2 class="text-center">Open Positions</h2>
+      <div>
+        <!-- {{jobs}} -->
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+
+        {% endfor %}
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2023, Jovian</p>
+      </div>
+    </div>
+  </body>
+</html>
