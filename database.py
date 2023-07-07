@@ -1,7 +1,12 @@
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
+sql_conn_str = os.environ.get('CON_STR')
 
-connectionString = 'mysql+pymysql://csjipzqfg2w0daaqiljz:pscale_pw_Se3o9k5TugINHugTLQseGLQFSOfswOFU90pE7A1xlaX@aws.connect.psdb.cloud/joviancareers?charset=utf8mb4'
+connectionString = sql_conn_str
+
 engine = create_engine(connectionString, connect_args={
     'ssl': {
         'ssl_ca': "/etc/ssl/cert.pem"
