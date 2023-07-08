@@ -1,11 +1,16 @@
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 import os
-load_dotenv()
 
-sql_conn_str = os.environ.get('CON_STR')
 
-connectionString = sql_conn_str
+load_dotenv('.env')
+
+USER = os.environ.get('DB_USERNAME')
+PASSWORD = os.environ.get('PASSWORD')
+DB_NAME =os.environ.get('DB_NAME')
+HOST = os.environ.get('HOST')
+
+connectionString = f'mysql+pymysql://{USER}:{PASSWORD}@{HOST}/{DB_NAME}?charset=utf8mb4'
 
 engine = create_engine(connectionString, connect_args={
     'ssl': {

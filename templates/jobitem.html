@@ -3,12 +3,12 @@
     <h4 style="color: rgb(120, 120, 120); margin-bottom: 4px">
       {{job['ID']}}. {{job['Title']}}
     </h4>
-    <div><b>Location:</b> {{job['Location']}}</div>
+    <div><b style="font-size: larger;">Location:</b> {{job['Location']}}</div>
     {% if 'Salary' in job %}
-    <div><b>Salary:</b> {{job['Currency']}} {{job['Salary']}}</div>
+    <div><b style="font-size: larger;">Salary:</b> {{job['Currency']}} {{job['Salary']}}</div>
     {% endif %}
-    <div><b>Responsibilities:</b> {{job['Responsibilities']}}</div>
-    <div><b>Requirements:</b> {{job['Requirements']}}</div>
+    <div><b style="font-size: larger;">Responsibilities:</b> {{job['Responsibilities']}}</div>
+    <div><b style="font-size: larger; ;">Requirements:</b> {{job['Requirements']}}</div>
   </div>
   <div class="col-1">
     <a
